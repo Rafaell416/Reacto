@@ -22,5 +22,18 @@
   "bugs": {
     "url": "https://github.com/Rafaell416/Reacto/issues"
   },
-  "homepage": "https://github.com/Rafaell416/Reacto#readme"
+  "homepage": "https://github.com/Rafaell416/Reacto#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-latest-minimal": "^1.1.2",
+    "babel-preset-react": "^6.23.0",
+    "express": "^4.14.1",
+    "json-loader": "^0.5.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
 }
