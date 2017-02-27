@@ -23624,8 +23624,6 @@ var _http2 = _interopRequireDefault(_http);
 
 var _server = __webpack_require__(89);
 
-var _server2 = _interopRequireDefault(_server);
-
 var _reactRouterDom = __webpack_require__(90);
 
 var _page = __webpack_require__(88);

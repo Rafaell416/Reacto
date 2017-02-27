@@ -3,7 +3,6 @@
 import React from'react'
 import http from 'http'
 import {renderToString} from 'react-dom/server'
-import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import Pages from './pages/containers/page.jsx'
 
