@@ -6,7 +6,7 @@ import Pages from './pages/containers/page.jsx'
 
 render (
 	<BrowserRouter>
-  	<Pages/>
+  		<Pages/>
 	</BrowserRouter>,
 	document.getElementById('render-target')
 )
