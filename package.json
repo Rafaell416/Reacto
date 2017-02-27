@@ -1,0 +1,26 @@
+{
+  "name": "reacto",
+  "version": "0.1.0",
+  "description": "react app made at platzi course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafaell416/Reacto.git"
+  },
+  "keywords": [
+    "reactjs",
+    "reacto",
+    "webpack",
+    "ReactJS",
+    "javascript"
+  ],
+  "author": "Rafael Villarreal <rvillarreal416@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rafaell416/Reacto/issues"
+  },
+  "homepage": "https://github.com/Rafaell416/Reacto#readme"
+}
