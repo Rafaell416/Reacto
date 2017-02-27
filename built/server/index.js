@@ -23814,20 +23814,28 @@ var _page = __webpack_require__(89);
 
 var _page2 = _interopRequireDefault(_page);
 
+var _Layout = __webpack_require__(215);
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function reqHandler(req, res) {
 
 	let context = {};
 
+	//aqui llamamos las direfentes vistas de la aplicación
 	let html = (0, _server.renderToString)(_react2.default.createElement(
 		_reactRouterDom.StaticRouter,
 		{ location: req.url, context: context },
 		_react2.default.createElement(_page2.default, null)
 	));
 
+	//se asegura que la data que renderice sea html
 	res.setHeader('Content-Type', 'text/html');
 
+	//validación de readirección
+	//si hay una petición de redireccion esta es llevada a la ruta donde quiere ir
 	if (context.url) {
 		res.writeHead(301, {
 			Location: context.url
@@ -23835,13 +23843,66 @@ function reqHandler(req, res) {
 		res.end();
 	}
 
-	res.write(html);
+	//renderizamos el contenido html
+	res.write((0, _server.renderToStaticMarkup)(_react2.default.createElement(_Layout2.default, {
+		title: 'Aplicaci\xF3n',
+		content: html
+	})));
 	res.end();
 }
 
+//inicio del servidor http
 const server = _http2.default.createServer(reqHandler);
 server.listen(3000);
 console.log('server is listening at port 3000');
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//esta funcion renderiza el contenedor o layout donde se cargarán las vista
+function Layout(props) {
+	return _react2.default.createElement(
+		'html',
+		null,
+		_react2.default.createElement(
+			'head',
+			null,
+			_react2.default.createElement('meta', { charSet: 'utf-8' }),
+			_react2.default.createElement(
+				'title',
+				null,
+				props.title
+			)
+		),
+		_react2.default.createElement(
+			'body',
+			null,
+			_react2.default.createElement('div', {
+				id: 'render-target',
+				dangerouslySetInnerHTML: {
+					__html: props.content
+				}
+			}),
+			_react2.default.createElement('script', { src: 'http://localhost/3001/app.js' })
+		)
+	);
+}
+
+exports.default = Layout;
 
 /***/ })
 /******/ ]);
