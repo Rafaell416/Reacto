@@ -1,20 +1,20 @@
 import React, {Component} from 'react'
 import { Link } from'react-router-dom';
 
-class Home extends Component {
+class Post extends Component {
 	render() {
 		return (
 			<section>
-				<h1>HOME</h1>
-				<Link to='/post/:id'>
-					Go to Post
+				<h1>Post</h1>
+				<Link to='/'>
+					Go to Home
 				</Link>
-				<Link to='/user/:id'>
-					Go to Profile
+				<Link to='/random'>
+					Go to random
 				</Link>
 			</section>
 		)
 	}
 } 
 
-export default Home
+export default Post
